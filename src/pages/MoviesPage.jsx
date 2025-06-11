@@ -24,7 +24,7 @@ const MoviesPage = () => {
         const results = await searchMovies(query);
         setMovies(results);
       } catch (err) {
-        setError('Film araması sırasında hata oluştu.', err);
+        setError('An error occurred while searching for movies.', err);
       } finally {
         setIsLoading(false);
       }

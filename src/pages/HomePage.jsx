@@ -9,6 +9,7 @@ const HomePage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    
     const fetchTrending = async () => {
       setIsLoading(true);
       setError(null);
@@ -29,7 +30,7 @@ const HomePage = () => {
   return (
     <div className="homepage-container">
      
-      <h1>Trending Movies</h1>
+      <h1>Trending Today</h1>
       {isLoading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       

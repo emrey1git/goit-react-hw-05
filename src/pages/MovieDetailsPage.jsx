@@ -3,6 +3,7 @@ import { useParams, useLocation, Link, NavLink, Outlet } from 'react-router-dom'
 import { getMovieDetails } from '../api/tmdb';
 
 const MovieDetailsPage = () => {
+  
   const { movieId } = useParams();
   const location = useLocation();
   const backLinkRef = useRef(location.state?.from ?? '/movies');
@@ -28,13 +29,21 @@ const MovieDetailsPage = () => {
   }, [movieId]);
   
 
-  if (isLoading) return <p>Yükleniyor...</p>;
+  if (isLoading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
   if (!movie) return null;
 
   return (
     <div>
       <Link to={backLinkRef.current}>← Go back</Link>
+      {movie.poster_path && (
+  <img
+    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+    alt={movie.title}
+    style={{ width: '300px', borderRadius: '8px' }}
+  />
+      )}
+
       <h1>{movie.title}</h1>
       <p>{movie.overview}</p>
       <p>Release date: {movie.release_date}</p>
