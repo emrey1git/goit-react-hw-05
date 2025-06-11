@@ -1,0 +1,1 @@
+import{j as e,L as o}from"./index-Ccxkg3qY.js";const r=()=>e.jsxs("div",{style:{padding:"2rem",textAlign:"center"},children:[e.jsx("h1",{children:"404 - Page Not Found"}),e.jsx("p",{children:"Sorry, the page you are looking for does not exist."}),e.jsx(o,{to:"/",style:{color:"#007bff",textDecoration:"underline"},children:"Return to home page"})]});export{r as default};

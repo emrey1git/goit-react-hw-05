@@ -1,0 +1,1 @@
+import{j as s,N as e,O as a}from"./index-Ccxkg3qY.js";const t=()=>s.jsxs(s.Fragment,{children:[s.jsxs("nav",{className:"nav-main",children:[s.jsx(e,{to:"/",end:!0,children:"Home"}),s.jsx(e,{to:"/movies",children:"Movies"})]}),s.jsx(a,{})]});export{t as default};
